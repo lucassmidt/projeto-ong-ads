@@ -5,51 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Exemplo - Transformando Vidas</title>
     <meta name="description" content="Conheça a ONG Exemplo, nossos projetos e como você pode ajudar a transformar vidas.">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
     <header>
-        <img src="imagens/logo.png" alt="Logo da ONG Exemplo" width="150">
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Participe</a></li>
-            </ul>
-        </nav>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="imagens/logo.png" alt="Logo da ONG Exemplo">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active"><a href="index.html">Início</a></li>
+                    <li class="dropdown">
+                        <a href="projetos.html">Projetos</a>
+                        <ul class="submenu">
+                            <li><a href="projetos.html#projeto-a">Educação Digital</a></li>
+                            <li><a href="projetos.html#projeto-b">Horta Comunitária</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="cadastro.html" class="btn btn-primary">Participe</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h1>Bem-vindo à ONG Exemplo</h1>
-            <p>Nossa missão é levar esperança e oportunidade para comunidades carentes.</p>
-            <img src="imagens/banner-home.jpg" alt="Crianças sorrindo e participando de atividades da ONG" width="800">
+        <section class="page-section" style="background: #e9ecef; text-align: center;">
+            <div class="container">
+                <h1>Bem-vindo à ONG Exemplo</h1>
+                <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-3);">Nossa missão é levar esperança e oportunidade para comunidades carentes.</p>
+                <img src="imagens/banner-home.jpg" alt="Crianças sorrindo e participando de atividades da ONG" style="border-radius: var(--border-radius); box-shadow: var(--shadow);">
+            </div>
         </section>
 
-        <section>
-            <h2>Sobre Nós</h2>
-            <p>Fundada em 2010, a ONG Exemplo já impactou mais de 5.000 vidas através de programas de educação, saúde e geração de renda. Conheça nossa história e junte-se a nós.</p>
-            <h3>Nossa Missão</h3>
-            <p>Promover o desenvolvimento social e a cidadania.</p>
-            <h3>Nossa Visão</h3>
-            <p>Ser referência em transformação social no Brasil.</p>
+        <section class="page-section">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <p>Fundada em 2010, a ONG Exemplo já impactou mais de 5.000 vidas através de programas de educação, saúde e geração de renda. Conheça nossa história e junte-se a nós.</p>
+                        <h3>Nossa Missão</h3>
+                        <p>Promover o desenvolvimento social e a cidadania.</p>
+                        <h3>Nossa Visão</h3>
+                        <p>Ser referência em transformação social no Brasil.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h3>Contato</h3>
+                        <address>
+                            Email: <a href="mailto:contato@ongexemplo.org">contato@ongexemplo.org</a><br>
+                            Telefone: <a href="tel:+5571999998888">(71) 99999-8888</a><br>
+                            Endereço: Rua da Esperança, 123, Salvador - BA
+                        </address>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Contato</h2>
-            <p>Entre em contato conosco para parcerias, dúvidas ou sugestões.</p>
-            
-            <address>
-                Email: <a href="mailto:contato@ongexemplo.org">contato@ongexemplo.org</a><br>
-                Telefone: <a href="tel:+5571999998888">(71) 99999-8888</a><br>
-                Endereço: Rua da Esperança, 123, Salvador - BA
-            </address>
+        <section class="page-section" style="background: #e9ecef;">
+            <div class="container">
+                <h2>Demonstração de Componentes</h2>
+                
+                <div class="alert alert-success">
+                    <strong>Sucesso!</strong> Este é um componente de alerta (alert).
+                </div>
+                <div class="alert alert-danger">
+                    <strong>Erro!</strong> Este é outro componente de alerta.
+                </div>
+                
+                <p>Botões com estados (hover, focus, etc.) e um modal:</p>
+                <button class="btn btn-primary" id="openModalBtn">Abrir Modal</button>
+                <button class="btn btn-secondary" disabled>Botão Desabilitado</button>
+            </div>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2025 ONG Exemplo. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2025 ONG Exemplo. Todos os direitos reservados.</p>
+        </div>
     </footer>
+    
+    <div class="modal-overlay" id="demoModal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar modal">&times;</button>
+            <h3>Este é um Modal</h3>
+            <p>Este é um exemplo de componente de feedback "modal", conforme solicitado na atividade.</p>
+            <button class="btn btn-primary modal-close">Entendi</button>
+        </div>
+    </div>
 
+    <script src="js/main.js" defer></script>
 </body>
 </html>

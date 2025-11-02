@@ -10,10 +10,10 @@ Este repositório documenta o desenvolvimento progressivo de uma plataforma web 
 
 O projeto é dividido em pastas, onde cada uma representa uma etapa de avaliação:
 
-* **/Entrega-I/**: Fundações e Estrutura. Foco em HTML5 semântico, formulários e estrutura de arquivos.
-* **/Entrega-II/**: Design System e Responsividade. Foco em CSS3, Flexbox, Grid, design responsivo e componentes de UI.
-* **/Entrega-III/**: Aplicação Web Dinâmica (SPA). Foco em JavaScript, manipulação do DOM, templates e arquitetura de Single Page Application.
-* **/Entrega-IV/**: Práticas Profissionais. Foco em Acessibilidade (WCAG 2.1 AA), Otimização e práticas de versionamento (Git).
+* **/Entrega I/**: Fundações e Estrutura. Foco em HTML5 semântico, formulários e estrutura de arquivos.
+* **/Entrega II/**: Design System e Responsividade. Foco em CSS3, Flexbox, Grid, design responsivo e componentes de UI.
+* **/Entrega III/**: Aplicação Web Dinâmica (SPA). Foco em JavaScript, manipulação do DOM, templates e arquitetura de Single Page Application.
+* **/Entrega IV/**: Práticas Profissionais. Foco em Acessibilidade (WCAG 2.1 AA), Otimização e práticas de versionamento (Git).
 
 ## Tecnologias Utilizadas
 

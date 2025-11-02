@@ -1,0 +1,120 @@
+/* * 5+ BREAKPOINTS (Requisito)
+ *
+ * 1. Default: (Mobile-First) 0px - 575px
+ * 2. Small (sm): 576px+
+ * 3. Medium (md): 768px+
+ * 4. Large (lg): 992px+
+ * 5. Extra Large (xl): 1200px+
+ */
+
+/* Breakpoint 2: Small (sm) - Phablets */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Breakpoint 3: Medium (md) - Tablets */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    /* Colunas para tablets */
+    .col-md-4 { flex-basis: 33.33%; max-width: 33.33%; }
+    .col-md-6 { flex-basis: 50%; max-width: 50%; }
+    .col-md-8 { flex-basis: 66.66%; max-width: 66.66%; }
+    .col-md-12 { flex-basis: 100%; max-width: 100%; }
+
+}
+
+/* Breakpoint 4: Large (lg) - Desktops */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    /* Colunas para desktops */
+    .col-lg-4 { flex-basis: 33.33%; max-width: 33.33%; }
+    .col-lg-6 { flex-basis: 50%; max-width: 50%; }
+    .col-lg-8 { flex-basis: 66.66%; max-width: 66.66%; }
+}
+
+/* Breakpoint 5: Extra Large (xl) - Desktops Largos */
+@media (min-width: 1200px) {
+    .container {
+        max-width: var(--max-width); /* 1140px */
+    }
+}
+
+
+/* ----- Responsividade Específica de Componentes ----- */
+
+/* Regras para Tablet e acima (onde o menu hamburger some) */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: block !important; /* Garante que o menu desktop seja visível */
+    }
+}
+
+
+/* Regras para Mobile (onde o menu hamburger aparece) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Mostra o botão hamburger */
+        z-index: 1001; /* Fica acima do menu */
+    }
+
+    .nav-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Escondido fora da tela */
+        width: 70%;
+        height: 100vh;
+        background: white;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding-top: var(--spacing-6);
+        transition: right 0.4s ease-in-out;
+    }
+
+    /* Classe .active é adicionada via JS */
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu li {
+        margin: var(--spacing-2);
+        width: 90%;
+    }
+
+    .nav-menu a {
+        display: block;
+        width: 100%;
+    }
+
+    /* Dropdown em mobile */
+    .dropdown .submenu {
+        display: none; /* Escondido por padrão */
+        position: static;
+        box-shadow: none;
+        padding-left: var(--spacing-2);
+    }
+    
+    /* Mostra o submenu se o dropdown estiver "ativo" (simulado no JS) */
+    .dropdown.active .submenu {
+         display: block;
+    }
+
+    /* Colunas em mobile: todas 100% de largura (já é o padrão) */
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
+    .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}

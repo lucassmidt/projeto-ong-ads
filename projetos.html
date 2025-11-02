@@ -5,57 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos e Voluntariado - ONG Exemplo</title>
     <meta name="description" content="Conheça nossos projetos sociais, saiba como ser um voluntário ou faça uma doação.">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
     <header>
-        <img src="imagens/logo.png" alt="Logo da ONG Exemplo" width="150">
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Participe</a></li>
-            </ul>
-        </nav>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="imagens/logo.png" alt="Logo da ONG Exemplo">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li class="dropdown active">
+                        <a href="projetos.html">Projetos</a>
+                        <ul class="submenu">
+                            <li><a href="#projeto-a">Educação Digital</a></li>
+                            <li><a href="#projeto-b">Horta Comunitária</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="cadastro.html" class="btn btn-primary">Participe</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h1>Nossos Projetos</h1>
-        <p>Conheça as iniciativas que estão mudando realidades.</p>
+        <section class="page-section">
+            <div class="container">
+                <h1>Nossos Projetos</h1>
+                <p style="text-align: center; max-width: 600px; margin: 0 auto var(--spacing-4);">Conheça as iniciativas que estão mudando realidades.</p>
 
-        <section>
-            <h2>Lista de Projetos Ativos</h2>
+                <div class="row">
+                    
+                    <div class="col-md-6 col-lg-6" id="projeto-a">
+                        <article class="card">
+                            <img src="imagens/projeto-a.jpg" alt="Jovens em uma sala de aula de informática" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">Educação Digital para Jovens</h3>
+                                <p class="card-text">Capacitamos jovens de comunidades carentes com habilidades em tecnologia, preparando-os para o mercado de trabalho.</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="badge badge-accent">Educação</span>
+                                <span class="badge">Tecnologia</span>
+                            </div>
+                        </article>
+                    </div>
 
-            <article>
-                <h3>Educação Digital para Jovens</h3>
-                <img src="imagens/projeto-a.jpg" alt="Jovens em uma sala de aula de informática" width="400">
-                <p>Capacitamos jovens de comunidades carentes com habilidades em tecnologia, preparando-os para o mercado de trabalho.</p>
-            </article>
+                    <div class="col-md-6 col-lg-6" id="projeto-b">
+                        <article class="card">
+                            <img src="imagens/projeto-b.jpg" alt="Pessoas colhendo vegetais em uma horta comunitária" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">Horta Comunitária</h3>
+                                <p class="card-text">Promovemos a segurança alimentar e a geração de renda através do cultivo orgânico e sustentável de alimentos.</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="badge badge-accent">Sustentabilidade</span>
+                                <span class="badge">Comunidade</span>
+                            </div>
+                        </article>
+                    </div>
 
-            <article>
-                <h3>Horta Comunitária Sustentável</h3>
-                <img src="imagens/projeto-b.jpg" alt="Pessoas colhendo vegetais em uma horta comunitária" width="400">
-                <p>Promovemos a segurança alimentar e a geração de renda através do cultivo orgânico e sustentável de alimentos.</p>
-            </article>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Seja um Voluntário</h2>
-            <p>O seu tempo e talento podem fazer uma grande diferença. O voluntariado é uma troca incrível de experiências e afeto. Temos vagas para monitoria, organização de eventos e muito mais.</p>
-            <p>Interessado? <a href="cadastro.html">Cadastre-se agora</a> e selecione a opção "Quero ser Voluntário".</p>
+        <section class="page-section" style="background: #e9ecef;">
+            <div class="container" style="text-align: center;">
+                <h2>Seja um Voluntário</h2>
+                <p style="margin-bottom: var(--spacing-3);">O seu tempo e talento podem fazer uma grande diferença. O voluntariado é uma troca incrível de experiências.</p>
+                <a href="cadastro.html" class="btn btn-primary">Quero ser Voluntário</a>
+            </div>
         </section>
 
-        <section>
-            <h2>Como Doar</h2>
-            <p>Sua contribuição financeira é fundamental para mantermos nossos projetos ativos. As doações são transparentes e você pode acompanhar onde seu recurso é aplicado.</p>
-            <p>Doe através do PIX: <strong>contato@ongexemplo.org</strong></p>
-            <p>Para doações recorrentes ou outros valores, <a href="cadastro.html">acesse nossa área de doador</a>.</p>
-        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 ONG Exemplo. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2025 ONG Exemplo. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
+    <script src="js/main.js" defer></script>
 </body>
 </html>

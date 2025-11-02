@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Exemplo - Transformando Vidas (SPA)</title>
+    <meta name="description" content="Conheça a ONG Exemplo, nossos projetos e como você pode ajudar a transformar vidas.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <a href="#app-root" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header role="banner">
+        <div class="container header-container">
+            <a href="#/" class="logo">
+                <img src="imagens/logo.png" alt="Logo da ONG Exemplo">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu-list">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav-menu">
+                <ul id="nav-menu-list">
+                    <li><a href="#/">Início</a></li>
+                    <li class="dropdown">
+                        <a href="#/projetos" aria-haspopup="true" aria-expanded="false">Projetos</a>
+                        <ul class="submenu">
+                            <li><a href="#/projetos">Todos os Projetos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#/cadastro" class="btn btn-primary">Participe</a></li>
+                </ul>
+            </nav>
+
+            <button class="theme-toggle" id="theme-toggle-btn" aria-label="Alternar tema">
+                <span class="icon-moon">🌙</span>
+                <span class="icon-sun">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="app-root" role="main">
+        </main>
+
+    <footer role="contentinfo"> <div class="container">
+            <p>&copy; 2025 ONG Exemplo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* === ACESSIBILIDADE: SKIP LINK === */
+/* Fica escondido até receber foco (pressionando TAB) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+.skip-link:focus {
+    position: absolute;
+    left: var(--spacing-2);
+    top: var(--spacing-2);
+    width: auto;
+    height: auto;
+    overflow: visible;
+    z-index: 1001; /* Fica acima de tudo */
+    padding: var(--spacing-2) var(--spacing-3);
+    background: var(--color-primary);
+    color: var(--color-text-light);
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+}
+
+/* === BOTÃO DE TEMA (DARK MODE) === */
+.theme-toggle {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-lg);
+    margin-left: var(--spacing-2);
+    color: var(--text-color);
+}
+
+.theme-toggle:hover {
+    background: var(--color-border);
+}
+
+/* Esconde o ícone que não está ativo */
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+/* === LÓGICA DO MODO ESCURO (DARK MODE) === */
+
+/* 1. Define variáveis de tema */
+:root {
+    --bg-color: var(--color-bg-light);
+    --text-color: var(--color-text);
+    --card-bg: #ffffff;
+    --border-color: var(--color-border);
+    --header-bg: var(--color-bg-light);
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --card-bg: #1e1e1e;
+    --border-color: #444;
+    --header-bg: #1e1e1e;
+
+    /* Troca os ícones do botão */
+    .theme-toggle .icon-sun { display: block; }
+    .theme-toggle .icon-moon { display: none; }
+}
+
+/* 2. Aplica as variáveis do tema */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background: var(--header-bg);
+    border-color: var(--border-color);
+}
+
+.page-section {
+    background: var(--bg-color);
+}
+
+.card, .modal-content, .nav-menu.active {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.card-footer {
+    background: var(--bg-color);
+    border-color: var(--border-color);
+}
+
+.nav-menu a {
+     color: var(--text-color);
+}
+.nav-menu a:hover,
+.nav-menu li.active a {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+}
+.nav-menu .submenu {
+    background: var(--card-bg);
+}
+.nav-menu .submenu a {
+     color: var(--text-color);
+}
+.nav-menu .submenu a:hover {
+    background-color: var(--bg-color);
+    color: var(--color-primary);
+}
+
+
+.form-group input {
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}

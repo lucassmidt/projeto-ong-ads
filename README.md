@@ -46,4 +46,4 @@ Você **deve** usar um servidor local.
 
 ## Autor
 
-**[Seu Nome Aqui]**
+Lucas Smidt
